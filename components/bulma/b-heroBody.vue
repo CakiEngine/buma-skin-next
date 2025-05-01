@@ -1,22 +1,16 @@
-<template>
-    <div :class="bulma('hero-body')">
-        <div :class="bulma('container')">
-            <h1 :class="bulma('title')">
-                <slot name="title"></slot>
-            </h1>
-            <h2 :class="bulma('subtitle')">
-                <slot name="subtitle"></slot>
-            </h2>
-        </div>
-    </div>
-</template>
-
-<script>
-import bulma from '../../src/bulma'
-
-export default {
-    methods: {
-        bulma
-    }
+export default function BHeroBody(props) {
+    return (
+        <>
+            <div className="hero-body">
+                <div className="container">
+                    <h1 className="title">
+                        {props.title}
+                    </h1>
+                    <h2 className="subtitle">
+                        {props.subtitle}
+                    </h2>
+                </div>
+            </div>
+        </>
+    )
 }
-</script>
